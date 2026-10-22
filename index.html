@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amhsa Marina Hotels & Resorts</title>
+    <link rel="preload" as="image" href="images/CASA_MARINA_LOBBY1.jpg" fetchpriority="high">
+    <link rel="stylesheet" href="style.css?v=31.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Selector de Idioma Flotante en la Esquina Superior DERECHA -->
+    <div class="top-right-lang">
+        <i class="fa-solid fa-globe"></i>
+        <select id="languageSelect" onchange="changeLanguage(this.value)" class="lang-dropdown">
+            <option value="es" selected>ES</option>
+            <option value="en">EN</option>
+        </select>
+    </div>
+
+    <!-- ================= NAVEGACIÓN CENTRADA Y HORIZONTAL ================= -->
+    <nav class="navbar clean-stacked-menu">
+        <div class="logo-top-centered">
+            <a href="#" onclick="showView('inicio')">
+                <img src="images/logo-amhsa.png" alt="Amhsa Marina Logo" class="nav-logo-img">
+            </a>
+        </div>
+
+        <ul class="nav-links-row">
+            <li><a href="#" onclick="showView('inicio')" id="nav-inicio" class="active">INICIO</a></li>
+            <li><a href="#" onclick="showView('habitaciones')" id="nav-habitaciones">HABITACIONES</a></li>
+            <li><a href="#" onclick="showView('restaurantes')" id="nav-restaurantes">Gastronomía</a></li>
+            <li><a href="#" onclick="showView('galeria')" id="nav-galeria">GALERÍA</a></li>
+            <li><a href="#" onclick="showView('noticias')" id="nav-noticias">NOTICIAS</a></li>
+        </ul>
+    </nav>
+
+
+   <!-- ================= VISTA 1: INICIO ================= -->
+    <div id="view-inicio" class="page-view">
+        <header class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-slider">
+                <div class="slide active" style="background-image: url('images/CASA_MARINA_LOBBY1.jpg');"></div>
+                <div class="slide" style="background-image: url('images/CASA_MARINA_LOBBY2.jpg');"></div>
+                <div class="slide" style="background-image: url('images/CASA_MARINA_JACUZZI.jpg');"></div>
+                <div class="slide" style="background-image: url('images/CASA_MARINA_MAIN_POOL.jpg');"></div>
+                <div class="slide" style="background-image: url('images/CASA_MARINA_POOL.jpg');"></div>
+            </div>
+            <div class="hero-content">
+                <h1 id="hero-title">Descubre una mezcla de nuestros Hoteles</h1>
+                <a href="#reservas" class="btn-primary-hero" id="hero-btn">RESERVAR AHORA</a>
+            </div>
+        </header>
+
+        <!-- Cuadro de Reservas Flotante -->
+        <section id="reservas" class="booking-section reveal-on-scroll">
+            <div class="booking-search-bar">
+                <div class="booking-field">
+                    <label id="lbl-resort"><i class="fa-solid fa-hotel"></i> Resort / Hotel</label>
+                    <select class="booking-input">
+                        <option>Casa Marina Sosúa</option>
+                        <option>Select Sosúa Adults Only</option>
+                    </select>
+                </div>
+                <div class="booking-field">
+                    <label id="lbl-fechas"><i class="fa-solid fa-calendar-days"></i> Llegada - Salida</label>
+                    <input type="date" class="booking-input" required>
+                </div>
+                <div class="booking-field">
+                    <label id="lbl-huespedes"><i class="fa-solid fa-users"></i> Huéspedes</label>
+                    <select class="booking-input">
+                        <option>2 Adultos, 0 Niños</option>
+                        <option>2 Adultos, 1 Niño</option>
+                        <option>1 Adulto</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-search-booking">
+                    <i class="fa-solid fa-magnifying-glass"></i> <span id="btn-search-text">VER DISPONIBILIDAD</span>
+                </button>
+            </div>
+        </section>
+        <!-- SECCIÓN RESEÑA EDITORIAL CON IMÁGENES SUPERPUESTAS (ESTILO "OUR STORY") -->
+        <section class="story-overlap-section reveal-on-scroll">
+            <div class="story-overlap-container">
+                
+                <!-- Imagen Decorativa Izquierda (Superior) -->
+                <div class="story-img-left">
+                    <img src="images/CASA_MARINA_LOBBY1.jpg" alt="Amhsa Marina Resort">
+                </div>
+
+                <!-- Tarjeta Central Flotante con la Reseña -->
+                <div class="story-card-box">
+                    <span class="story-subtitle">Nuestra Historia</span>
+                    <h2 class="story-heading">Hospitalidad & Tradición en el Caribe</h2>
+                    <p class="story-text">
+                        Es una empresa con experiencia en la industria turística que opera los hoteles todo incluido: <strong>Casa Marina Sosúa, Trademark by Wyndham All Inclusive</strong> y <strong>Select Sosúa Adults Only, Trademark by Wyndham All Inclusive</strong>, en Sosúa, Puerto Plata, República Dominicana.
+                    </p>
+                    <p class="story-text">
+                        Los hoteles ofrecen un servicio de hospitalidad completo enfocado en clientes que buscan entretenimiento y relajación en el mismo lugar.
+                    </p>
+                </div>
+
+                <!-- Imagen Decorativa Derecha (Inferior) -->
+                <div class="story-img-right">
+                    <img src="images/CASA_MARINA_MAIN_POOL.jpg" alt="Piscinas y Playas Amhsa Marina">
+                </div>
+
+            </div>
+        </section>
+        <!-- SECCIÓN SHOWCASE DE HABITACIONES DESTACADAS (FULL-WIDTH) -->
+        <section class="rooms-showcase-section reveal-on-scroll">
+            <div class="showcase-top-link">
+                <a href="#" onclick="showView('habitaciones')">VER TODAS LAS HABITACIONES &rarr;</a>
+            </div>
+
+            <div class="showcase-banner">
+                <div class="showcase-overlay"></div>
+                
+                <div class="showcase-slides">
+                    <div class="showcase-slide active" style="background-image: url('images/STANDARD.jpg');">
+                        <div class="showcase-content">
+                            <h2 class="showcase-title">Superior Room</h2>
+                            <p class="showcase-desc">Equipadas con una cama King o dos camas dobles y un balcón o terraza privada, nuestras habitaciones superiores son el santuario ideal frente al mar.</p>
+                            <div class="showcase-buttons">
+                                <a href="#" onclick="showView('habitaciones')" class="btn-showcase-more">VER MÁS &rarr;</a>
+                                <a href="#reservas" class="btn-showcase-reserve">RESERVAR</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="showcase-slide" style="background-image: url('images/CASA_MARINA_DELUXE_ROOM_2BED.jpg');">
+                        <div class="showcase-content">
+                            <h2 class="showcase-title">Deluxe Vista Jardín</h2>
+                            <p class="showcase-desc">Exclusivas habitaciones remodeladas, diseñadas para brindar una estancia elegante y acogedora con mobiliario moderno.</p>
+                            <div class="showcase-buttons">
+                                <a href="#" onclick="showView('habitaciones')" class="btn-showcase-more">VER MÁS &rarr;</a>
+                                <a href="#reservas" class="btn-showcase-reserve">RESERVAR</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="showcase-slide" style="background-image: url('images/Premium OV SELECT.jpg');">
+                        <div class="showcase-content">
+                            <h2 class="showcase-title">Select Premium Vista Mar</h2>
+                            <p class="showcase-desc">Disfruta de vistas espectaculares al Océano Atlántico con amenidades VIP en área exclusiva para adultos.</p>
+                            <div class="showcase-buttons">
+                                <a href="#" onclick="showView('habitaciones')" class="btn-showcase-more">VER MÁS &rarr;</a>
+                                <a href="#reservas" class="btn-showcase-reserve">RESERVAR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="showcase-controls">
+                    <button type="button" class="showcase-arrow" onclick="moveShowcaseSlide(-1)">&larr;</button>
+                    <button type="button" class="showcase-arrow" onclick="moveShowcaseSlide(1)">&rarr;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE BIENVENIDA CON VIDEO PROMOCIONAL -->
+        <section class="welcome-editorial-section reveal-on-scroll">
+            <div class="welcome-container">
+                <div class="welcome-text-content">
+                   
+                    <h2 class="welcome-title">Una Experiencia Inolvidable frente al Mar</h2>
+                    
+                    <p class="welcome-paragraph">
+                        Casa Marina Sosua by Wyndham es un complejo turístico «todo incluido» situado a 10 minutos del Aeropuerto de Puerto Plata. Establecimiento en una playa semiprivada con más de 500 metros de frente de mar cristalino.
+                    </p>
+
+                    <div class="welcome-badge">
+                        <h3>¿Listo para la Aventura?</h3>
+                        <p>Descubre nuestras exclusivas ofertas de temporada.</p>
+                       
+                    </div>
+                </div>
+
+                <div class="welcome-media-content">
+                    <div class="video-frame-wrapper">
+                        <video autoplay muted loop playsinline class="welcome-video-player">
+                            <source src="videos/Casa Marina y Select.mp4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- SECCIÓN SHOWCASE DE RESTAURANTES DESTACADOS (FULL-WIDTH EN INICIO) -->
+        <section class="dining-showcase-section reveal-on-scroll">
+            <div class="showcase-top-link">
+                <a href="#" onclick="showView('restaurantes')">VER TODOS LOS RESTAURANTES &rarr;</a>
+            </div>
+
+            <div class="showcase-banner">
+                <div class="showcase-overlay"></div>
+                
+                <div class="dining-showcase-slides">
+                    <div class="dining-slide active" style="background-image: url('images/Hermann Restaurant.jpg');">
+                        <div class="showcase-content">
+                            <h2 class="showcase-title">Hermann International Cuisine</h2>
+                            <p class="showcase-desc">Una experiencia culinaria a la carta con los mejores cortes y recetas internacionales en un ambiente elegante y acogedor.</p>
+                            <div class="showcase-buttons">
+                                <a href="#" onclick="showView('restaurantes')" class="btn-showcase-more">EXPLORAR MENÚ &rarr;</a>
+                                <a href="#reservas" class="btn-showcase-reserve">RESERVAR MESA</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dining-slide" style="background-image: url('images/CASA_MARINA_MAIN_POOL.jpg');">
+                        <div class="showcase-content">
+                            <h2 class="showcase-title">El Batey Buffet</h2>
+                            <p class="showcase-desc">Variedad gastronómica diaria con estaciones en vivo, cocina dominicana auténtica e internacional frente a los jardines tropicales.</p>
+                            <div class="showcase-buttons">
+                                <a href="#" onclick="showView('restaurantes')" class="btn-showcase-more">EXPLORAR MENÚ &rarr;</a>
+                                <a href="#reservas" class="btn-showcase-reserve">RESERVAR MESA</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="showcase-controls">
+                    <button type="button" class="showcase-arrow" onclick="moveDiningSlide(-1)">&larr;</button>
+                    <button type="button" class="showcase-arrow" onclick="moveDiningSlide(1)">&rarr;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiencias Destacadas -->
+        <section class="home-features-section reveal-on-scroll">
+            <div class="features-container">
+                <div class="section-header-center">
+                    <span class="welcome-subtitle">EXCELENCIA Y SABOR</span>
+                    <h2 class="welcome-title">Nuestras Experiencias Destacadas</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <img src="images/Hermann Restaurant.jpg" alt="Gastronomía">
+                        <div class="feature-info">
+                            <h3>Gastronomía a la Carta</h3>
+                            <p>Restaurantes especializados con lo mejor de la cocina internacional.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <img src="images/CASA_MARINA_MAIN_POOL.jpg" alt="Piscinas">
+                        <div class="feature-info">
+                            <h3>Piscinas Frente al Mar</h3>
+                            <p>Magníficas piscinas con vistas panorámicas al Océano Atlántico.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <img src="images/CASA_MARINA_DISCO.jpg" alt="Entretenimiento">
+                        <div class="feature-info">
+                            <h3>Vida Nocturna & Shows</h3>
+                            <p>Espectáculos en vivo, animación diurna y nocturna.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div> <!-- CIERRE CORRECTO DE #view-inicio -->
+<!-- ================= VISTA 2: HABITACIONES ================= -->
+    <div id="view-habitaciones" class="page-view" style="display: none;">
+        <header class="page-header" style="background-image: linear-gradient(rgba(13, 21, 39, 0.65), rgba(13, 21, 39, 0.65)), url('images/STANDARD.jpg');">
+            <h1>Nuestras Habitaciones & Suites</h1>
+            <p>Confort, elegancia y vistas espectaculares frente al mar</p>
+        </header>
+
+        <section class="rooms-page-container reveal-on-scroll">
+            
+            <!-- Botones de Pestañas -->
+            <div class="rooms-tabs">
+                <button type="button" class="tab-btn active" onclick="switchRoomTab('casa-marina')">
+                    <i class="fa-solid fa-star star-icon"></i>
+                    <span>CASA MARINA SOSUA, TRADEMARK BY<br>WYNDHAM ALL INCLUSIVE</span>
+                </button>
+                <button type="button" class="tab-btn" onclick="switchRoomTab('select-adults')">
+                    <i class="fa-solid fa-star star-icon"></i> 
+                    <span>SELECT SOSUA ADULTS ONLY, TRADEMARK<br>BY WYNDHAM ALL INCLUSIVE</span>
+                </button>
+            </div>
+
+            <!-- ================= PESTAÑA 1: CASA MARINA SOSÚA ================= -->
+            <div id="tab-casa-marina" class="room-tab-content">
+                <div class="select-hero-intro">
+                    <p class="select-description">Disfruta de la mejor experiencia Todo Incluido en habitaciones totalmente equipadas frente a jardines tropicales o las aguas del Caribe.</p>
+                </div>
+
+                <div class="select-rooms-container">
+                    
+                    <!-- Habitación 1: Standard Vista Jardín -->
+                    <article class="select-room-item">
+                        <div class="select-room-slider">
+                            <div class="mini-slider-container">
+                                <img src="images/STANDARD.jpg" alt="Standard Vista Jardín 1" class="slider-img active">
+                                <img src="images/CASA_MARINA_MAIN_POOL.jpg" alt="Standard Vista Jardín 2" class="slider-img">
+                            </div>
+                            <button type="button" class="slider-btn prev-btn" onclick="moveRoomSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button type="button" class="slider-btn next-btn" onclick="moveRoomSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                        
+                        <div class="select-room-info">
+                            <h3>Standard Vista Jardín</h3>
+                            <p class="select-room-text">Habitaciones diseñadas especialmente para que disfrutes del máximo confort y relajación, equipadas con balcón o terraza privada hacia nuestros frondosos jardines tropicales.</p>
+                            
+                            <ul class="room-amenities-full">
+                                <li><i class="fa-solid fa-umbrella-beach"></i> Balcón o terraza privada</li>
+                                <li><i class="fa-solid fa-bed"></i> Cama King o dos camas dobles</li>
+                                <li><i class="fa-solid fa-bath"></i> Baño completo con bañera</li>
+                                <li><i class="fa-solid fa-lock"></i> Caja de seguridad</li>
+                                <li><i class="fa-solid fa-user-group"></i> Ocupación máx. 4 personas</li>
+                                <li><i class="fa-solid fa-shirt"></i> Plancha y tabla de planchar</li>
+                                <li><i class="fa-solid fa-wind"></i> Secador de pelo</li>
+                                <li><i class="fa-solid fa-wine-bottle"></i> Minibar reabastecido</li>
+                                <li><i class="fa-solid fa-ban-smoking"></i> Habitación No fumadores</li>
+                                <li><i class="fa-solid fa-wifi"></i> WiFi de alta velocidad</li>
+                            </ul>
+
+                            <div class="select-actions">
+                                <a href="#reservas" class="btn-select-orange" onclick="showView('inicio')">RESERVAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Habitación 2: Deluxe Vista Jardín -->
+                    <article class="select-room-item reverse-item">
+                        <div class="select-room-slider">
+                            <div class="mini-slider-container">
+                                <img src="images/CASA_MARINA_DELUXE_ROOM_2BED.jpg" alt="Deluxe Vista Jardín 1" class="slider-img active">
+                                <img src="images/CASA_MARINA_LOBBY1.jpg" alt="Deluxe Vista Jardín 2" class="slider-img">
+                            </div>
+                            <button type="button" class="slider-btn prev-btn" onclick="moveRoomSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button type="button" class="slider-btn next-btn" onclick="moveRoomSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                        
+                        <div class="select-room-info">
+                            <h3>Deluxe Vista Jardín</h3>
+                            <p class="select-room-text">Exclusivas habitaciones completamente remodeladas, diseñadas para brindar una estancia elegante y acogedora con mobiliario moderno y amplia ventilación natural.</p>
+                            
+                            <ul class="room-amenities-full">
+                                <li><i class="fa-solid fa-umbrella-beach"></i> Balcón o terraza privada</li>
+                                <li><i class="fa-solid fa-bed"></i> Cama King o dos camas Queen</li>
+                                <li><i class="fa-solid fa-shower"></i> Baño con ducha tipo lluvia</li>
+                                <li><i class="fa-solid fa-lock"></i> Caja de seguridad digital</li>
+                                <li><i class="fa-solid fa-user-group"></i> Ocupación máx. 4 personas</li>
+                                <li><i class="fa-solid fa-wine-bottle"></i> Minibar e hidratación</li>
+                                <li><i class="fa-solid fa-wifi"></i> WiFi de alta velocidad</li>
+                                <li><i class="fa-solid fa-tv"></i> Smart TV con cable</li>
+                            </ul>
+
+                            <div class="select-actions">
+                                <a href="#reservas" class="btn-select-orange" onclick="showView('inicio')">RESERVAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Habitación 3: Deluxe Vista al Mar -->
+                    <article class="select-room-item">
+                        <div class="select-room-slider">
+                            <div class="mini-slider-container">
+                                <img src="images/CASA_MARINA_DELUXE_ROOM_1BED.jpg" alt="Deluxe Vista al Mar 1" class="slider-img active">
+                                <img src="images/CASA_MARINA_JACUZZI.jpg" alt="Deluxe Vista al Mar 2" class="slider-img">
+                            </div>
+                            <button type="button" class="slider-btn prev-btn" onclick="moveRoomSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button type="button" class="slider-btn next-btn" onclick="moveRoomSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                        
+                        <div class="select-room-info">
+                            <h3>Deluxe Vista al Mar</h3>
+                            <p class="select-room-text">Despierta cada mañana con impresionantes panorámicas directas al Océano Atlántico. Habitaciones renovadas con decoración náutica chic e iluminación relajante.</p>
+                            
+                            <ul class="room-amenities-full">
+                                <li><i class="fa-solid fa-water"></i> Vista frontal/lateral al Mar</li>
+                                <li><i class="fa-solid fa-umbrella-beach"></i> Balcón amueblado</li>
+                                <li><i class="fa-solid fa-bed"></i> Cama King size</li>
+                                <li><i class="fa-solid fa-shower"></i> Baño moderno con ducha</li>
+                                <li><i class="fa-solid fa-user-group"></i> Ocupación máx. 2 personas</li>
+                                <li><i class="fa-solid fa-wifi"></i> WiFi Gratis</li>
+                            </ul>
+
+                            <div class="select-actions">
+                                <a href="#reservas" class="btn-select-orange" onclick="showView('inicio')">RESERVAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Habitación 4: Standard Solo Adultos -->
+                    <article class="select-room-item reverse-item">
+                        <div class="select-room-slider">
+                            <div class="mini-slider-container">
+                                <img src="images/SUPERIOR__PRIVEE ADULTS ONLY.jpg" alt="Standard Solo Adultos 1" class="slider-img active">
+                                <img src="images/CASA_MARINA_POOL.jpg" alt="Standard Solo Adultos 2" class="slider-img">
+                            </div>
+                            <button type="button" class="slider-btn prev-btn" onclick="moveRoomSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button type="button" class="slider-btn next-btn" onclick="moveRoomSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                        
+                        <div class="select-room-info">
+                            <span class="room-badge badge-adults" style="background-color: #0077C8; color: #fff; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 10px;">Zona Privée (18+)</span>
+                            <h3>Standard Solo Adultos</h3>
+                            <p class="select-room-text">Ubicadas en un área serena y reservada exclusivamente para adultos, ofreciendo acceso directo y privileged a la piscina privada de la zona Privée.</p>
+                            
+                            <ul class="room-amenities-full">
+                                <li><i class="fa-solid fa-water-ladder"></i> Acceso a Piscina Privée</li>
+                                <li><i class="fa-solid fa-umbrella-beach"></i> Balcón o terraza</li>
+                                <li><i class="fa-solid fa-bed"></i> Cama King</li>
+                                <li><i class="fa-solid fa-bath"></i> Baño con bañera</li>
+                                <li><i class="fa-solid fa-user-group"></i> Ocupación máx. 2 personas</li>
+                                <li><i class="fa-solid fa-wifi"></i> WiFi Gratis</li>
+                            </ul>
+
+                            <div class="select-actions">
+                                <a href="#reservas" class="btn-select-orange" onclick="showView('inicio')">RESERVAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- ================= PESTAÑA 2: SELECT ADULTS ONLY ================= -->
+            <div id="tab-select-adults" class="room-tab-content" style="display: none;">
+                <div class="select-hero-intro">
+                    <p class="select-description">En Select Sosua Adults Only cada habitación está diseñada para el máximo confort en zona exclusiva.</p>
+                </div>
+
+                <div class="select-rooms-container">
+                    
+                    <!-- Tarjeta 1: Select Premium Vista Jardín -->
+                    <article class="select-room-item">
+                        <div class="select-room-slider">
+                            <div class="mini-slider-container">
+                                <img src="images/Premium GV SELECT.jpg" alt="Select Premium Vista Jardín 1" class="slider-img active">
+                                <img src="images/CASA_MARINA_DELUXE_ROOM_2BED.jpg" alt="Select Premium Vista Jardín 2" class="slider-img">
+                            </div>
+                            <button type="button" class="slider-btn prev-btn" onclick="moveRoomSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button type="button" class="slider-btn next-btn" onclick="moveRoomSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                        
+                        <div class="select-room-info">
+                            <h3>Select Premium Vista Jardín</h3>
+                            <p class="select-room-text">Habitaciones especialmente diseñadas para que disfrutes del máximo confort y relajación. Cuentan con una cama king size o dos camas full size, capacidad máxima de 4 personas, balcón con hermosa vista al jardín.</p>
+                            
+                            <ul class="room-amenities-full">
+                                <li><i class="fa-solid fa-umbrella-beach"></i> Balcón o terraza</li>
+                                <li><i class="fa-solid fa-bed"></i> Cama King o dos camas doble</li>
+                                <li><i class="fa-solid fa-shower"></i> Baño con ducha</li>
+                                <li><i class="fa-solid fa-lock"></i> Caja de seguridad</li>
+                                <li><i class="fa-solid fa-user-group"></i> Ocupación máx. 4 personas</li>
+                                <li><i class="fa-solid fa-shirt"></i> Plancha y tabla</li>
+                                <li><i class="fa-solid fa-wind"></i> Secador de pelo</li>
+                                <li><i class="fa-solid fa-wine-bottle"></i> Minibar</li>
+                                <li><i class="fa-solid fa-ban-smoking"></i> No fumadores</li>
+                                <li><i class="fa-solid fa-wifi"></i> WiFi Gratis</li>
+                                <li><i class="fa-solid fa-mug-hot"></i> Coffee Shop & Sports Bar</li>
+                                <li><i class="fa-solid fa-utensils"></i> Acceso a Hermann Cuisine</li>
+                                <li><i class="fa-solid fa-umbrella-beach"></i> Toallas de playa</li>
+                                <li><i class="fa-solid fa-concierge-bell"></i> Reservaciones prioritarias</li>
+                                <li><i class="fa-solid fa-pump-soap"></i> Pantuflas y amenidades</li>
+                                <li><i class="fa-solid fa-tv"></i> Smart TV con cable</li>
+                            </ul>
+
+                            <div class="select-actions">
+                                <a href="#reservas" class="btn-select-orange" onclick="showView('inicio')">RESERVAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 2: Select Premium Vista Mar -->
+                    <article class="select-room-item reverse-item">
+                        <div class="select-room-slider">
+                            <div class="mini-slider-container">
+                                <img src="images/Premium OV SELECT.jpg" alt="Select Premium Vista Mar 1" class="slider-img active">
+                                <img src="images/CASA_MARINA_JACUZZI.jpg" alt="Select Premium Vista Mar 2" class="slider-img">
+                            </div>
+                            <button type="button" class="slider-btn prev-btn" onclick="moveRoomSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button type="button" class="slider-btn next-btn" onclick="moveRoomSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                        
+                        <div class="select-room-info">
+                            <h3>Select Premium Vista Mar</h3>
+                            <p class="select-room-text">Habitaciones especialmente diseñadas para que disfrutes del máximo confort y relajación frente a las aguas turquesas del Caribe. Cuentan con balcón privado con vistas al mar.</p>
+                            
+                            <ul class="room-amenities-full">
+                                <li><i class="fa-solid fa-umbrella-beach"></i> Balcón o terraza con vista al mar</li>
+                                <li><i class="fa-solid fa-bed"></i> Cama King o dos camas doble</li>
+                                <li><i class="fa-solid fa-shower"></i> Baño con ducha</li>
+                                <li><i class="fa-solid fa-lock"></i> Caja de seguridad</li>
+                                <li><i class="fa-solid fa-user-group"></i> Ocupación máx. 4 personas</li>
+                                <li><i class="fa-solid fa-wine-bottle"></i> Minibar premium</li>
+                                <li><i class="fa-solid fa-wifi"></i> WiFi Gratis</li>
+                                <li><i class="fa-solid fa-concierge-bell"></i> Reservaciones prioritarias</li>
+                                <li><i class="fa-solid fa-pump-soap"></i> Pantuflas y amenidades</li>
+                                <li><i class="fa-solid fa-tv"></i> Smart TV con cable</li>
+                            </ul>
+
+                            <div class="select-actions">
+                                <a href="#reservas" class="btn-select-orange" onclick="showView('inicio')">RESERVAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 3: Select Junior Suite Vista Jardín -->
+                    <article class="select-room-item">
+                        <div class="select-room-slider">
+                            <div class="mini-slider-container">
+                                <img src="images/Junior Suite Swim up (3).jpg" alt="Select Junior Suite 1" class="slider-img active">
+                                <img src="images/STANDARD.jpg" alt="Select Junior Suite 2" class="slider-img">
+                            </div>
+                            <button type="button" class="slider-btn prev-btn" onclick="moveRoomSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button type="button" class="slider-btn next-btn" onclick="moveRoomSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                        
+                        <div class="select-room-info">
+                            <h3>Select Junior Suite Vista Jardín</h3>
+                            <p class="select-room-text">Habitaciones conceptualizadas con sala de estar independiente, balcón con vistas al jardín tropical y máxima privacidad para adultos.</p>
+                            
+                            <ul class="room-amenities-full">
+                                <li><i class="fa-solid fa-couch"></i> Sala de estar independiente</li>
+                                <li><i class="fa-solid fa-umbrella-beach"></i> Balcón o terraza privada</li>
+                                <li><i class="fa-solid fa-bed"></i> Cama King size</li>
+                                <li><i class="fa-solid fa-shower"></i> Baño con ducha</li>
+                                <li><i class="fa-solid fa-wifi"></i> WiFi Gratis</li>
+                                <li><i class="fa-solid fa-concierge-bell"></i> Reservaciones prioritarias</li>
+                            </ul>
+
+                            <div class="select-actions">
+                                <a href="#reservas" class="btn-select-orange" onclick="showView('inicio')">RESERVAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 4: Select Junior Suite Swim Up -->
+                    <article class="select-room-item reverse-item">
+                        <div class="select-room-slider">
+                            <div class="mini-slider-container">
+                                <img src="images/Junior Suite Swim Up SELECT(2).jpg" alt="Select Swim Up 1" class="slider-img active">
+                                <img src="images/Junior Suite_Ocean ViewSELECT.jpg" alt="Select Swim Up 2" class="slider-img">
+                            </div>
+                            <button type="button" class="slider-btn prev-btn" onclick="moveRoomSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button type="button" class="slider-btn next-btn" onclick="moveRoomSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                        
+                        <div class="select-room-info">
+                            <h3>Select Junior Suite Swim Up</h3>
+                            <p class="select-room-text">Habitaciones con acceso exclusivo e inmediato a una piscina privada desde su propia terraza soleada. Viva la experiencia de lujo definitivo en Sosúa.</p>
+                            
+                            <ul class="room-amenities-full">
+                                <li><i class="fa-solid fa-water-ladder"></i> Acceso directo a piscina Swim-Up</li>
+                                <li><i class="fa-solid fa-umbrella-beach"></i> Terraza privada con asoleaderos</li>
+                                <li><i class="fa-solid fa-bed"></i> Cama King size</li>
+                                <li><i class="fa-solid fa-wine-bottle"></i> Minibar reposición diaria</li>
+                                <li><i class="fa-solid fa-wifi"></i> WiFi Gratis VIP</li>
+                            </ul>
+
+                            <div class="select-actions">
+                                <a href="#reservas" class="btn-select-orange" onclick="showView('inicio')">RESERVAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+        </section> <!-- CIERRE DE .rooms-page-container -->
+    </div> <!-- CIERRE CORRECTO DE #view-habitaciones -->
+
+    <!-- ================= VISTA 3: RESTAURANTES ================= -->
+    <div id="view-restaurantes" class="page-view" style="display: none;">
+        
+        <!-- Portada Principal con Filtro Oscuro -->
+        <header class="page-header" style="background-image: linear-gradient(rgba(13, 21, 39, 0.65), rgba(13, 21, 39, 0.65)), url('images/Hermann Restaurant.jpg');">
+            <h1>Gastronomía & Experiencias Culinarias</h1>
+            <p>Sabores internacionales, cocina gourmet a la carta y cócteles de autor frente al mar</p>
+        </header>
+
+        <section class="rooms-page-container reveal-on-scroll">
+            <div class="select-hero-intro">
+                
+            </div>
+
+            <!-- Listado de Restaurantes y Bares en Formato Abierto (Zig-Zag) -->
+            <div class="select-rooms-container">
+                
+                <!-- Restaurante 1: Hermann International Cuisine -->
+                <article class="select-room-item">
+                    <div class="select-room-slider">
+                        <div class="mini-slider-container">
+                            <img src="images/Hermann Restaurant.jpg" alt="Hermann International Cuisine" class="slider-img active">
+                        </div>
+                    </div>
+                    
+                    <div class="select-room-info">
+                        <h3>Hermann International Cuisine</h3>
+                        <p class="select-room-text">Especialidad a la carta con una exquisita selección de cortes y platillos internacionales en una atmósfera íntima, distinguida y acogedora.</p>
+                        
+                        <ul class="room-amenities-full">
+                            <li><i class="fa-solid fa-utensils"></i> Servicio Gourmet a la Carta</li>
+                            <li><i class="fa-solid fa-shirt"></i> Código de vestir: Casual Elegante</li>
+                            <li><i class="fa-solid fa-concierge-bell"></i> Requiere reservación previa</li>
+                            <li><i class="fa-solid fa-clock"></i> Horario de Cena: 6:30 PM - 10:00 PM</li>
+                            <li><i class="fa-solid fa-wine-glass"></i> Selección de vinos y bebidas premium</li>
+                            <li><i class="fa-solid fa-snowflake"></i> Salón climatizado</li>
+                        </ul>
+
+                        <div class="select-actions">
+                            <a href="#reservas" class="btn-select-orange" onclick="showView('inicio')">RESERVAR MESA</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Restaurante 2: El Batey Buffet -->
+                <article class="select-room-item reverse-item">
+                    <div class="select-room-slider">
+                        <div class="mini-slider-container">
+                            <img src="images/CASA_MARINA_EL_BATEY.jpg" alt="El Batey Buffet" class="slider-img active">
+                        </div>
+                    </div>
+                    
+                    <div class="select-room-info">
+                        <h3>El Batey Buffet Internacional</h3>
+                        <p class="select-room-text">Variedad gastronómica diaria con estaciones de cocina en vivo, auténticas recetas dominicanas e internacionales frente a frondosos jardines tropicales.</p>
+                        
+                        <ul class="room-amenities-full">
+                            <li><i class="fa-solid fa-utensils"></i> Buffet Internacional Abierto</li>
+                            <li><i class="fa-solid fa-clock"></i> Desayuno: 7:00 AM - 10:30 AM</li>
+                            <li><i class="fa-solid fa-clock"></i> Almuerzo: 12:30 PM - 3:00 PM</li>
+                            <li><i class="fa-solid fa-clock"></i> Cena: 6:30 PM - 10:00 PM</li>
+                            <li><i class="fa-solid fa-leaf"></i> Opciones vegetarianas y de dieta</li>
+                            <li><i class="fa-solid fa-child"></i> Ambiente familiar</li>
+                        </ul>
+
+                        <div class="select-actions">
+                            <a href="#reservas" class="btn-select-orange" onclick="showView('inicio')">VER HORARIOS</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Bar 3: Mirador Ocean View Bar -->
+                <article class="select-room-item">
+                    <div class="select-room-slider">
+                        <div class="mini-slider-container">
+                            <img src="images/CASA_MARINA_LUIGGI.jpg" alt="Mirador Ocean View Bar" class="slider-img active">
+                        </div>
+                    </div>
+                    
+                    <div class="select-room-info">
+                        <h3>Luiggi</h3>
+                        <p class="select-room-text">Disfruta de cócteles tropicales y bebidas de primera categoría mientras admiras impresionantes atardeceres dorados sobre los acantilados del Caribe.</p>
+                        
+                        <ul class="room-amenities-full">
+                            <li><i class="fa-solid fa-martini-glass-citrus"></i> Coctelería de Autor y Bebidas Nacionales</li>
+                            <li><i class="fa-solid fa-water"></i> Vista panorámica directa al Océano</li>
+                            <li><i class="fa-solid fa-couch"></i> Zona de Lounge al aire libre</li>
+                            <li><i class="fa-solid fa-clock"></i> Horario: 10:00 AM - 11:00 PM</li>
+                        </ul>
+
+                        <div class="select-actions">
+                            <a href="#reservas" class="btn-select-orange" onclick="showView('inicio')">RESERVAR</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="select-room-item reverse-item">
+                    <div class="select-room-slider">
+                        <div class="mini-slider-container">
+                            <img src="images/CASA_MARINA_EL_PASO.jpg" alt="El Batey Buffet" class="slider-img active">
+                        </div>
+                    </div>
+                    
+                    <div class="select-room-info">
+                        <h3>Tex Mex</h3>
+                        <p class="select-room-text">Variedad gastronómica diaria con estaciones de cocina en vivo, auténticas recetas dominicanas e internacionales frente a frondosos jardines tropicales.</p>
+                        
+                        <ul class="room-amenities-full">
+                            <li><i class="fa-solid fa-utensils"></i> Buffet Internacional Abierto</li>
+                            <li><i class="fa-solid fa-clock"></i> Desayuno: 7:00 AM - 10:30 AM</li>
+                            <li><i class="fa-solid fa-clock"></i> Almuerzo: 12:30 PM - 3:00 PM</li>
+                            <li><i class="fa-solid fa-clock"></i> Cena: 6:30 PM - 10:00 PM</li>
+                            <li><i class="fa-solid fa-leaf"></i> Opciones vegetarianas y de dieta</li>
+                            <li><i class="fa-solid fa-child"></i> Ambiente familiar</li>
+                        </ul>
+
+                        <div class="select-actions">
+                            <a href="#reservas" class="btn-select-orange" onclick="showView('inicio')">VER HORARIOS</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="select-room-item">
+                    <div class="select-room-slider">
+                        <div class="mini-slider-container">
+                            <img src="images/CASA_MARINA_SEA_SCAPE.jpg" alt="Mirador Ocean View Bar" class="slider-img active">
+                        </div>
+                    </div>
+                    
+                    <div class="select-room-info">
+                        <h3>Sea Scape</h3>
+                        <p class="select-room-text">Disfruta de cócteles tropicales y bebidas de primera categoría mientras admiras impresionantes atardeceres dorados sobre los acantilados del Caribe.</p>
+                        
+                        <ul class="room-amenities-full">
+                            <li><i class="fa-solid fa-martini-glass-citrus"></i> Coctelería de Autor y Bebidas Nacionales</li>
+                            <li><i class="fa-solid fa-water"></i> Vista panorámica directa al Océano</li>
+                            <li><i class="fa-solid fa-couch"></i> Zona de Lounge al aire libre</li>
+                            <li><i class="fa-solid fa-clock"></i> Horario: 10:00 AM - 11:00 PM</li>
+                        </ul>
+
+                        <div class="select-actions">
+                            <a href="#reservas" class="btn-select-orange" onclick="showView('inicio')">RESERVAR</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </div>
+        </section>
+    </div> <!-- Fin de #view-habitaciones -->
+ <!-- ================= VISTA 4: GALERÍA DE FOTOS DIVIDIDA ================= -->
+    <div id="view-galeria" class="page-view" style="display: none;">
+        
+        <!-- Portada de Galería -->
+        <header class="page-header" style="background-image: linear-gradient(rgba(13, 21, 39, 0.65), rgba(13, 21, 39, 0.65)), url('images/CASA_MARINA_MAIN_POOL.jpg');">
+            <h1>Galería Fotográfica</h1>
+            <p>Descubre los rincones, paisajes y la elegancia de nuestras dos experiencias en Sosúa</p>
+        </header>
+
+        <section class="gallery-page-container reveal-on-scroll">
+            
+            <!-- PESTAÑAS DE NAVEGACIÓN PARA DIVIDIR LOS HOTELES -->
+            <div class="gallery-tabs-container">
+                <button class="gallery-tab-btn active" onclick="switchGalleryTab('casa-marina')">
+                    <i class="fa-solid fa-umbrella-beach"></i> <span>CASA MARINA SOSUA, TRADEMARK BY<br>WYNDHAM ALL INCLUSIVE</span>
+                </button>
+                <button class="gallery-tab-btn" onclick="switchGalleryTab('select-adults')">
+                    <i class="fa-solid fa-star"></i> <span>SELECT SOSUA ADULTS ONLY, TRADEMARK<br>BY WYNDHAM ALL INCLUSIVE</span>
+                </button>
+            </div>
+
+            <!-- ================= TAB 1: CASA MARINA SOSÚA ================= -->
+            <div id="gallery-tab-casa-marina" class="gallery-tab-content active">
+                
+                <!-- Hero Carrusel Casa Marina -->
+                <div class="gallery-hero-showcase">
+                    <div class="gallery-featured-hero">
+                        <div class="hero-carousel-container">
+                            <img src="images/CASA_MARINA_MAIN_POOL.jpg" alt="Piscina Principal Casa Marina" class="hero-carousel-img active">
+                            <img src="images/CASA_MARINA_JACUZZI.jpg" alt="Jacuzzis sobre Acantilado" class="hero-carousel-img">
+                            <img src="images/CASA_MARINA_LOBBY1.jpg" alt="Lobby Casa Marina" class="hero-carousel-img">
+                        </div>
+                        <div class="hero-carousel-overlay">
+                            <span class="gallery-tag">Familiar & All Inclusive</span>
+                            <h2>Casa Marina Sosúa Resort</h2>
+                        </div>
+                        <button type="button" class="gallery-carousel-btn prev" onclick="moveGalleryHeroSlide(-1, 'casa')"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button type="button" class="gallery-carousel-btn next" onclick="moveGalleryHeroSlide(1, 'casa')"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+
+                    <div class="gallery-side-features">
+                        <div class="side-feature-card" onclick="openLightbox('images/CASA_MARINA_DELUXE_ROOM_2BED.jpg', 'Habitación Deluxe Casa Marina')">
+                            <img src="images/CASA_MARINA_DELUXE_ROOM_2BED.jpg" alt="Habitación Deluxe">
+                            <div class="side-feature-caption">
+                                <span>Habitaciones Deluxe</span>
+                                <i class="fa-solid fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="side-feature-card" onclick="openLightbox('images/CASA_MARINA_POOL.jpg', 'Áreas de Piscina y Solárium')">
+                            <img src="images/CASA_MARINA_POOL.jpg" alt="Solárium Casa Marina">
+                            <div class="side-feature-caption">
+                                <span>Solárium & Piscinas</span>
+                                <i class="fa-solid fa-expand"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-section-title">
+                    <h2>Instalaciones de Casa Marina</h2>
+                    <div class="gold-divider"></div>
+                </div>
+
+                <!-- Mosaico Grid Original Restaurado - Casa Marina -->
+                <div class="editorial-gallery-grid">
+                    <div class="gallery-grid-item item-large" onclick="openLightbox('images/CASA_MARINA_MAIN_POOL.jpg', 'Vista Panorámica de la Piscina Principal')">
+                        <img src="images/CASA_MARINA_MAIN_POOL.jpg" alt="Piscina Principal">
+                        <div class="gallery-item-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <h3>Piscina Principal frente al Mar</h3>
+                            <p>Casa Marina Sosúa</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-grid-item" onclick="openLightbox('images/CASA_MARINA_LOBBY1.jpg', 'Lobby Principal y Recepción')">
+                        <img src="images/CASA_MARINA_LOBBY1.jpg" alt="Lobby Casa Marina">
+                        <div class="gallery-item-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <h3>Lobby Principal</h3>
+                            <p>Recepción & Bienvenida</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-grid-item" onclick="openLightbox('images/STANDARD.jpg', 'Habitación Standard Vista Jardín')">
+                        <img src="images/STANDARD.jpg" alt="Habitación Standard">
+                        <div class="gallery-item-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <h3>Standard Vista Jardín</h3>
+                            <p>Alojamiento Confortable</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-grid-item item-wide" onclick="openLightbox('images/CASA_MARINA_JACUZZI.jpg', 'Jacuzzis sobre Acantilados con Vista Océano')">
+                        <img src="images/CASA_MARINA_JACUZZI.jpg" alt="Jacuzzis al Atardecer">
+                        <div class="gallery-item-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <h3>Jacuzzis sobre Acantilados</h3>
+                            <p>Vistas Panorámicas al Atardecer</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-grid-item" onclick="openLightbox('images/CASA_MARINA_DELUXE_ROOM_1BED.jpg', 'Deluxe Vista al Mar 1 Cama King')">
+                        <img src="images/CASA_MARINA_DELUXE_ROOM_1BED.jpg" alt="Deluxe Vista al Mar">
+                        <div class="gallery-item-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <h3>Deluxe Vista al Mar</h3>
+                            <p>Estilo Náutico Renovado</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-grid-item" onclick="openLightbox('images/CASA_MARINA_POOL.jpg', 'Áreas de Piscina y Solárium')">
+                        <img src="images/CASA_MARINA_POOL.jpg" alt="Piscina Casa Marina">
+                        <div class="gallery-item-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <h3>Solárium & Piscinas</h3>
+                            <p>Entretenimiento Diario</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- VIDEO PRINCIPAL DE CASA MARINA -->
+                <div class="gallery-video-section">
+                    <div class="gallery-section-title">
+                        <h2>Experiencia Audiovisual Casa Marina</h2>
+                        <div class="gold-divider"></div>
+                        <p class="video-subtitle">Siente la atmósfera y energía de nuestras vacaciones todo incluido</p>
+                    </div>
+                    <div class="gallery-video-wrapper">
+                        <video id="video-casa-marina" controls autoplay muted loop playsinline poster="images/Marina Bk.jpg" preload="auto">
+                            <source src="videos/Casa Marina All Inclusive Video 1.mov" type="video/mp4">
+                            
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+</div>
+                </div>
+            </div>
+
+            <!-- ================= TAB 2: SELECT SOSÚA (ADULTS ONLY) ================= -->
+            <div id="gallery-tab-select-adults" class="gallery-tab-content" style="display: none;">
+                
+                <!-- Hero Carrusel Select -->
+                <div class="gallery-hero-showcase">
+                    <div class="gallery-featured-hero">
+                        <div class="hero-carousel-container">
+                            <img src="images/Junior Suite Swim Up SELECT(2).jpg" alt="Piscina Swim Up Select" class="hero-carousel-img active">
+                            <img src="images/Premium OV SELECT.jpg" alt="Suite Vista Mar Select" class="hero-carousel-img">
+                            <img src="images/SUPERIOR__PRIVEE ADULTS ONLY.jpg" alt="Zona Privée Adults Only" class="hero-carousel-img">
+                        </div>
+                        <div class="gallery-hero-overlay">
+                            <span class="gallery-tag" style="background-color: #0d1527;">Exclusivo Solo Adultos</span>
+                            <h2>Select Sosúa Adults Only</h2>
+                        </div>
+                        <button type="button" class="gallery-carousel-btn prev" onclick="moveGalleryHeroSlide(-1, 'select')"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button type="button" class="gallery-carousel-btn next" onclick="moveGalleryHeroSlide(1, 'select')"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+
+                    <div class="gallery-side-features">
+                        <div class="side-feature-card" onclick="openLightbox('images/SUPERIOR__PRIVEE ADULTS ONLY.jpg', 'Zona Privée Solo Adultos')">
+                            <img src="images/SUPERIOR__PRIVEE ADULTS ONLY.jpg" alt="Zona Privée">
+                            <div class="side-feature-caption">
+                                <span>Área Privée Exclusiva</span>
+                                <i class="fa-solid fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="side-feature-card" onclick="openLightbox('images/Hermann Restaurant.jpg', 'Hermann International Cuisine')">
+                            <img src="images/Hermann Restaurant.jpg" alt="Restaurante Gourmet">
+                            <div class="side-feature-caption">
+                                <span>Cena Gourmet Privada</span>
+                                <i class="fa-solid fa-expand"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-section-title">
+                    <h2>Instalaciones de Select Sosúa</h2>
+                    <div class="gold-divider"></div>
+                </div>
+
+                <!-- Mosaico Grid Original Restaurado - Select Sosúa -->
+                <div class="editorial-gallery-grid">
+                    <div class="gallery-grid-item item-large" onclick="openLightbox('images/Junior Suite Swim up (3).jpg', 'Junior Suite Swim Up Access')">
+                        <img src="images/Junior Suite Swim up (3).jpg" alt="Swim Up">
+                        <div class="gallery-item-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <h3>Junior Suite Swim-Up</h3>
+                            <p>Acceso Directo a Piscina Privada</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-grid-item item-tall" onclick="openLightbox('images/SUPERIOR__PRIVEE ADULTS ONLY.jpg', 'Zona Privée Solo Adultos')">
+                        <img src="images/SUPERIOR__PRIVEE ADULTS ONLY.jpg" alt="Zona Privée">
+                        <div class="gallery-item-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <h3>Exclusividad Privée</h3>
+                            <p>Zona Privada Select</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-grid-item" onclick="openLightbox('images/Premium OV SELECT.jpg', 'Select Premium Vista Mar')">
+                        <img src="images/Premium OV SELECT.jpg" alt="Premium OV">
+                        <div class="gallery-item-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <h3>Premium Vista Mar</h3>
+                            <p>Select Adults Only</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-grid-item" onclick="openLightbox('images/Premium GV SELECT.jpg', 'Select Premium Vista Jardín')">
+                        <img src="images/Premium GV SELECT.jpg" alt="Premium GV">
+                        <div class="gallery-item-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <h3>Premium Vista Jardín</h3>
+                            <p>Entorno Íntimo</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-grid-item item-wide" onclick="openLightbox('images/Hermann Restaurant.jpg', 'Experiencia Gourmet Restaurante Hermann')">
+                        <img src="images/Hermann Restaurant.jpg" alt="Hermann Restaurant">
+                        <div class="gallery-item-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <h3>Gastronomía Premium</h3>
+                            <p>Ambiente Romántico & Exclusivo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO PRINCIPAL DE SELECT SOSÚA -->
+                <div class="gallery-video-section">
+                    <div class="gallery-section-title">
+                        <h2>Experiencia Exclusiva Select Adults Only</h2>
+                        <div class="gold-divider"></div>
+                        <p class="video-subtitle">Un recorrido VIP por el lujo, serenidad y sofisticación de Select Sosúa</p>
+                    </div>
+                    <div class="gallery-video-wrapper">
+                        <video id="video-select-adults" controls autoplay muted loop playsinline poster="images/Select Bk.jpg" preload="auto">
+                            <source src="videos/Select Adults Only All Inclusive Video 1.mov" type="video/mp4">
+                            
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+    <!-- ================= VISTA 5: NOTICIAS & PRENSA ================= -->
+    <div id="view-noticias" class="page-view" style="display: none;">
+        
+        <header class="page-header" style="background-image: linear-gradient(rgba(13, 21, 39, 0.7), rgba(13, 21, 39, 0.7)), url('images/CASA_MARINA_MAIN_POOL.jpg');">
+            <h1>Noticias & Novedades</h1>
+            <p>Mantente al día con los comunicados oficiales, renovaciones y eventos de Amhsa Marina</p>
+        </header>
+
+        <section class="news-page-container reveal-on-scroll">
+            
+            <!-- NOTICIA DESTACADA (FEATURED) -->
+            <article class="news-featured-card">
+                <div class="news-featured-media">
+                    <img src="images/CASA_MARINA_POOL.jpg" alt="Cambio de Nombre Casa Marina">
+                    <span class="news-badge">Comunicado Oficial</span>
+                </div>
+                <div class="news-featured-body">
+                    <div class="news-meta">
+                        <span><i class="fa-regular fa-calendar"></i> Octubre 2026</span>
+                        <span><i class="fa-solid fa-hotel"></i> Casa Marina & Select</span>
+                    </div>
+                    <h2 class="news-title">Casa Marina Beach & Reef y Select at Casa Marina Anuncian Cambio de Nombre</h2>
+                    <p class="news-excerpt">
+                        Como parte de su proceso de evolución estratégica y fortalecimiento de identidad, el complejo operará bajo las prestigiosas marcas <strong>Casa Marina Sosúa, Trademark by Wyndham</strong> y <strong>Select Sosúa Adults Only, Trademark by Wyndham</strong>.
+                    </p>
+                    
+                    <!-- Contenido Completo Desplegable -->
+                    <div id="full-news-1" class="news-full-content" style="display: none;">
+                        <p>Esta alianza refleja con mayor precisión la propuesta de valor del complejo, su enfoque en la excelencia de la experiencia del huésped y su firme compromiso con los más altos estándares de calidad, confort y servicio personalizado.</p>
+                        <p>El cambio de nombre no afectará la continuidad operativa del hotel ni la calidad de los servicios. Por el contrario, esta transformación representa una reafirmación de su visión de crecimiento, innovación y adaptación a las nuevas tendencias del turismo moderno.</p>
+                        <p>Amhsa Marina continuará a cargo de la administración y mercadeo de ambos hoteles, ratificando su compromiso con el desarrollo sostenible del turismo en la costa norte de la República Dominicana.</p>
+                    </div>
+
+                    <button type="button" class="btn-news-readmore" onclick="toggleNewsContent('full-news-1', this)">
+                        <span>LEER COMUNICADO COMPLETO</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- CUADRÍCULA DE OTRAS NOTICIAS / SECUNDARIAS -->
+            <div class="news-secondary-title">
+                <h2>Otras Publicaciones</h2>
+                <div class="gold-divider"></div>
+            </div>
+
+            <div class="news-grid">
+                
+                <!-- Noticia Secundaría 1 -->
+                <article class="news-grid-card">
+                    <div class="news-grid-media">
+                        <img src="images/Hermann Restaurant.jpg" alt="Gastronomía Renovada">
+                        <span class="news-badge-sub">Gastronomía</span>
+                    </div>
+                    <div class="news-grid-body">
+                        <div class="news-meta">
+                            <span><i class="fa-regular fa-calendar"></i> Septiembre 2026</span>
+                        </div>
+                        <h3>Nueva Carta de Vinos y Menú Gourmet en Hermann Cuisine</h3>
+                        <p>Incorporamos cortes seleccionados y una propuesta enológica de primer nivel para huéspedes de Select Sosúa.</p>
+                        <a href="#view-restaurantes" class="news-link-simple" onclick="showView('view-restaurantes')">Saber más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Noticia Secundaría 2 -->
+                <article class="news-grid-card">
+                    <div class="news-grid-media">
+                        <img src="images/Junior Suite Swim up (3).jpg" alt="Suites Renovadas">
+                        <span class="news-badge-sub">Infraestructura</span>
+                    </div>
+                    <div class="news-grid-body">
+                        <div class="news-meta">
+                            <span><i class="fa-regular fa-calendar"></i> Agosto 2026</span>
+                        </div>
+                        <h3>Renovación Exclusiva de las Junior Suites Swim-Up</h3>
+                        <p>Diseño de interiores actualizado con estilo contemporáneo náutico y acceso directo a solárium privado.</p>
+                        <a href="#view-habitaciones" class="news-link-simple" onclick="showView('view-habitaciones')">Ver Habitaciones <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+    </div>
+    <!-- ================= PIE DE PÁGINA (FOOTER) ================= -->
+    <footer class="main-footer" id="contacto">
+        <div class="footer-container">
+            <div class="footer-property-logos">
+                <img src="images/Marina White.png" alt="Casa Marina" class="footer-brand-logo">
+                <span class="footer-divider">|</span>
+                <img src="images/Select White.png" alt="Select" class="footer-brand-logo">
+            </div>
+
+            <div class="footer-card-orange">
+                <h2>AMHSA MARINA HOTELS</h2>
+                <p>Operamos los hoteles todo incluido Casa Marina Sosúa y Select Sosúa Adults Only en Sosúa, Puerto Plata, República Dominicana.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>CONTACTO</h3>
+                <ul>
+                    <li>📍 Los Pinos #7, Ensanche La Julia, Santo Domingo</li>
+                    <li>✉️ <a href="mailto:info@amhsamarina.com">info@amhsamarina.com</a></li>
+                    <li>📞 <a href="tel:18095627475">1.809.562.7475</a></li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/amhsamarina" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/amhsamarina" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>EMPRESA</h3>
+                <ul>
+                    <li><a href="#">› Política De Privacidad</a></li>
+                    <li><a href="#">› Políticas De Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 <a href="#">Amhsa Marina Hotels & Resorts</a>. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js?v=4.0"></script>
+</body>
+</html>

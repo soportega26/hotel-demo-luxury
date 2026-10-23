@@ -618,7 +618,7 @@ html, body {
 .room-card-content h3 {
     font-family: 'Playfair Display', serif;
     font-size: 22px;
-    color: #0d1527;
+    color: #010929;
     margin-bottom: 10px;
 }
 
@@ -718,133 +718,145 @@ html, body {
     padding: 8px 18px; font-weight: 600; border-radius: 4px; cursor: pointer; margin-top: 15px;
 }
 
-/* =========================================================
-   PIE DE PÁGINA (FOOTER) - ANCHO COMPLETO 100%
-   ========================================================= */
-
-body {
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    overflow-x: hidden;
-}
-
-.main-footer {
-    width: 100vw !important;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw !important;
-    margin-right: -50vw !important;
-    background-color: #0d1527 !important;
+/* PIE DE PÁGINA COMPLETO LUXURY */
+.luxury-footer {
+    width: 100vw;
+    background-color: #010929;
+    color: #FFFFFF;
+    padding: 80px 60px 30px 60px;
+    margin-top: 80px;
 }
 
 .footer-container {
-    width: 100%;
     max-width: 1250px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 40px;
-    padding: 0 25px 40px 25px;
-    align-items: start;
+    grid-template-columns: 1.2fr 1.5fr 1fr;
+    gap: 60px;
+    border-bottom: 1px solid rgba(9, 25, 114, 0.1);
+    padding-bottom: 50px;
 }
 
-/* Logos en la parte superior del footer */
-.footer-property-logos {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 20px;
+.footer-col h4 {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: #E96310;
+    margin-bottom: 25px;
 }
 
-.footer-brand-logo {
-    height: 55px;
-    width: auto;
-    object-fit: contain;
-    filter: brightness(0) invert(1);
-}
-
-.footer-divider {
-    color: #F5A623;
-    font-size: 22px;
-}
-
-/* Tarjeta Naranja Informativa */
-.footer-card-orange {
-    background-color: #E96310 !important; /* Naranja Amhsa */
-    color: #ffffff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-}
-
-.footer-card-orange h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
-}
-
-.footer-card-orange p {
+.footer-col p {
     font-size: 0.9rem;
-    line-height: 1.6;
+    color: #CCCCCC;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.footer-column h3 {
-    color: #E96310 !important;
-    font-size: 15px;
-    margin-bottom: 18px;
+.footer-col i {
+    color: #E96310;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul a {
+    color: #CCCCCC;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul a:hover {
+    color: #E96310;
+}
+
+.footer-tagline {
+    font-size: 0.8rem;
+    color: #888888;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+    margin-top: 5px;
 }
 
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-column ul li {
-    margin-bottom: 10px;
-    font-size: 13px;
-    color: #e2e8f0;
-}
-
-.footer-column ul li a {
-    color: #e2e8f0;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-column ul li a:hover {
+.footer-wyndham-badge {
+    margin-top: 20px;
+    border: 1px solid #E96310;
+    padding: 6px 14px;
+    display: inline-block;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
     color: #E96310;
 }
 
-/* Franja Inferior de Derechos Reservados */
 .footer-bottom {
-    width: 100% !important;
-    background-color: #070c17 !important; /* Azul más oscuro para el cierre */
-    padding: 18px 20px;
+    max-width: 1250px;
+    margin: 25px auto 0 auto;
     text-align: center;
-    font-size: 13px;
-    color: #94a3b8;
-    margin: 0;
 }
 
-.footer-bottom a {
+.footer-copy {
+    font-size: 0.75rem;
+    color: #777777;
+}
+
+/* LIGHTBOX MODAL */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 85%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.lightbox-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    text-align: center;
     color: #E96310;
-    text-decoration: none;
+    padding: 15px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
 }
 
-@media (max-width: 900px) {
-    .booking-search-bar { flex-direction: column; margin-top: 20px; }
-    .welcome-container, .rooms-grid-detailed, .gallery-media-grid, .news-featured-card, .footer-container, .features-grid {
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* RESPONSIVO */
+@media (max-width: 992px) {
+    .editorial-container, .suites-grid, .editorial-gallery-grid, .footer-container, .luxury-booking-bar {
         grid-template-columns: 1fr;
+        flex-direction: column;
     }
-    .nav-links-row { flex-wrap: wrap; gap: 15px !important; }
+    .hero-title { font-size: 2.8rem; }
+    .luxury-nav { padding: 20px; }
+    .nav-links { display: none; }
 }
 /* =========================================================
    DISEÑO SELECT SOSÚA - TARJETAS EN ZIG-ZAG Y CARRUSEL

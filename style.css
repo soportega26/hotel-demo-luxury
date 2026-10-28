@@ -1297,7 +1297,7 @@ html, body {
 #view-restaurantes .select-room-slider {
     position: relative;
     width: 100%;
-    height: 480px; /* Fotos mucho más grandes y llamativas */
+    height: 560px; /* Fotos mucho más grandes y llamativas */
     border-radius: 0px !important;
     overflow: hidden;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
@@ -1305,12 +1305,12 @@ html, body {
 
 @media (min-width: 1400px) {
     #view-restaurantes .select-room-slider {
-        height: 520px; /* Pantallas grandes */
+        height: 800px; /* Pantallas grandes */
     }
 }
 
 /* Responsivo para móviles y tablets */
-@media (max-width: 992px) {
+@media (max-width: 2000px) {
     #view-restaurantes .select-room-item, 
     #view-restaurantes .select-room-item.reverse-item {
         grid-template-columns: 1fr !important;
